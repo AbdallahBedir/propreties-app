@@ -9,7 +9,8 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "favicon.ico"
+        "favicon.ico",
+        "favicon-home.ico"
       ],
       "index": "index.html",
       "main": "main.ts",
@@ -19,6 +20,8 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+        "../node_modules/bootstrap/scss/basicBootstrap.scss",
+        "../node_modules/@angular/material/core/theming/prebuilt/firebase-theme.scss",
         "styles.scss"
       ],
       "scripts": [],

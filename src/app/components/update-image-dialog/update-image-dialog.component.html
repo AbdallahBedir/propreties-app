@@ -1,0 +1,11 @@
+    <h2 md-dialog-title>Delete Image?</h2>
+    <md-dialog-content>	
+        <p>
+            Are you sure you want to update property image ? 
+            the old one will be deleted
+        </p>
+    </md-dialog-content>
+    <md-dialog-actions>	
+        <button md-raised-button (click)="dialogRef.close('Delete')" value="Delete" class="danger">Yes Delete It</button>
+        <button md-raised-button value="Cancel" md-dialog-close>Cancel</button>
+    </md-dialog-actions>	

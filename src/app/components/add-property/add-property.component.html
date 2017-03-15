@@ -1,0 +1,43 @@
+<div class="add-property" [@addProperty]>
+    <form [formGroup]="addPropertyForm" (ngSubmit)="save(addPropertyForm)">  
+        <md-input-container [class.invalidTitle]="validForm == false">
+            <input mdInput placeholder="Title" name="title" value="" [formControl]="title">
+        </md-input-container>
+
+        <md-input-container>
+            <input mdInput placeholder="City" name="city" value="" [formControl]="city">
+        </md-input-container>
+
+        <md-input-container>
+            <input mdInput placeholder="Owner" name="owner" value="" [formControl]="owner">
+        </md-input-container>
+
+        <md-input-container>
+            <input mdInput type="number" placeholder="Bedrooms" name="bedrooms" value="" [formControl]="bedrooms">
+        </md-input-container>
+
+        <md-select placeholder="Type" (change)="selectChanged($event.value)" name="type">
+            <md-option *ngFor="let type of Types" [value]="type.value">
+                {{ type.viewValue }}
+            </md-option>
+        </md-select>
+
+        <div class="form-controls">
+            <input type="file" id="file" name="image" (change)="fileChange($event)" accept=".jpg,.png,.jpeg">
+            <label for="file">
+                <md-icon>backup</md-icon><span>Choose an image...</span>
+            </label>
+            <p *ngIf="fileErrorMessage">
+                {{fileErrorMessage}}
+            </p>
+        </div>
+
+        <md-input-container>
+            <input mdInput name="price" placeholder="Price" name="price" value="" [formControl]="price">
+        </md-input-container>
+
+        <div class="action-buttons">
+            <button md-raised-button>Add Property</button>
+        </div>
+    </form>
+</div>

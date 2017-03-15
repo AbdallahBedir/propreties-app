@@ -1,0 +1,34 @@
+<div class="property" [@property]>
+    <a [routerLink]="['/Properties']">Back</a>
+    <h2>
+      {{ item?.title }} <span>{{ item?.city }} </span>
+    </h2>
+    <div class="property-info">
+      <div class="row">
+        <div class="col-sm-6">
+            <div class="property-img">
+                <div *ngIf="IsImageExist">
+                    <img src="{{imgSrc}}" alt="{{item.title}}">
+                </div>
+                <p *ngIf="!IsImageExist">There is no image for this property</p>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="property-details">
+                <ul>
+                    <li>Owner : <span>{{ item?.owner }}</span> </li>
+                    <li>Bedrooms : <span>{{ item?.bedrooms }}</span> </li>
+                    <li>Type : <span>{{ item?.type }}</span> </li>
+                    <li>Price : <span>{{ item?.price }}</span> </li>
+                </ul>
+            </div>
+        </div>
+      </div>
+      <!--end row -->
+    </div>
+    <!-- end property-info -->
+    <div class="actions">
+      <button md-raised-button class="edit" [routerLink]="['/Edit-property',id]">Edit</button>
+      <button md-raised-button class="delete" (click)="openDialog()">Delete</button>
+    </div>
+</div>

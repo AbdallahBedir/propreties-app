@@ -1,0 +1,7 @@
+<div class="properties" [@properties]>
+  <ul>
+    <li *ngFor="let i of items">
+        <a [routerLink]="['/Property',i.$key]">{{i.title}}</a>
+    </li>
+  </ul>
+</div>

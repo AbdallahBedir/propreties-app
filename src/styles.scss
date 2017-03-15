@@ -1,1 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~_variables.scss";
+body{
+    //background-color:#2f2e33;
+    font-family: 'Nunito', sans-serif !important;
+}
+button{
+    font-family: 'Nunito', sans-serif !important
+}
+ul{
+       list-style: none;        
+}
+.mat-input-underline {
+    border-color: #585858;
+}
+.mat-input-placeholder {
+    color:rgba(255, 255, 255, 0.4);
+    font-family: 'Nunito', sans-serif !important;
+}
+.mat-input-element,.mat-select-value {
+    color:#a7a7a7 !important;
+    color:#b3b3b3 !important;
+    font-family: 'Nunito', sans-serif !important;
+}
+
+/*********** Global Dialog styles ***************/
+.mat-dialog-container{
+    text-align: center;
+    background: #f7f7f7;
+    .mat-dialog-title{
+        font-weight:700 !important;
+    }
+    h2{
+        color:$dialog-heading;
+    }
+    .mat-dialog-content{
+        p{
+            color:$dialog-paragraph;
+        }
+    }
+    .mat-dialog-actions{
+        //text-align: center !important;
+        display: block !important;
+        button{
+            background-color:#fff;
+            color:#868686;
+            .mat-button-focus-overlay{
+                background-color: transparent;
+            }
+            &:focus {
+                outline: none;
+            }
+            &.danger.mat-raised-button{
+                background-color:$danger-color;
+                color:#fff;
+            }
+        }
+    }
+}// end dialog styles
+
+/************start select styles *************/
+.mat-option.mat-selected {
+    color: #383737;
+}
+/************end selecr styles ***************/
+    

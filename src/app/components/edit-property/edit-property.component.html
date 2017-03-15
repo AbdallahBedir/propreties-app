@@ -1,0 +1,43 @@
+<div class="edit-property" [@editProperty]>
+    <form [formGroup]="editPropertyForm" (ngSubmit)="update(editPropertyForm)">  
+        <md-input-container [class.invalidTitle]="invalidForm">
+            <input mdInput placeholder="Title" name="title" [(ngModel)]="item.title" [formControl]="title">
+        </md-input-container>
+
+        <md-input-container>
+            <input mdInput placeholder="City" name="city" [(ngModel)]="item.city" [formControl]="city">
+        </md-input-container>
+
+        <md-input-container>
+            <input mdInput placeholder="Owner" name="owner" [(ngModel)]="item.owner" [formControl]="owner">
+        </md-input-container>
+
+        <md-input-container>
+            <input mdInput type="number" placeholder="Bedrooms" name="bedrooms" [(ngModel)]="item.bedrooms" [formControl]="bedrooms">
+        </md-input-container>
+
+        <md-select placeholder="Type" [(ngModel)]="item.type" [formControl]="type">
+            <md-option *ngFor="let type of Types" [value]="type.value">
+                {{ type.viewValue }}
+            </md-option>
+        </md-select>
+
+        <div class="form-controls">
+            <input type="file" id="file" name="image" (change)="fileChange($event)" accept=".jpg,.png,.jpeg">
+            <label for="file">
+                <md-icon>backup</md-icon><span>Choose an image...</span>
+            </label>
+            <p *ngIf="fileErrorMessage">
+                {{fileErrorMessage}}
+            </p>
+        </div>
+
+        <md-input-container>
+            <input mdInput name="price" placeholder="Price" name="price" [(ngModel)]="item.price" [formControl]="price">
+        </md-input-container>
+
+        <div class="action-buttons">
+            <button md-raised-button>Save</button>
+        </div>
+    </form>
+</div>

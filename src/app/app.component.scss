@@ -1,0 +1,69 @@
+@import "~_variables.scss";
+
+nav{
+    .navbar-brand{
+        i{
+            color:$danger-color;
+        }
+    }
+    ul{
+        li{
+            &.active{
+                .nav-link{
+                    color: rgba(0, 0, 0, 0.65);
+                }
+            }
+            a{
+                cursor:pointer;
+                transition: all 0.25s ease;
+                font-weight: 700;
+                &.nav-link{
+                   color:rgba(0, 0, 0, .47);
+                   &:focus,&:active,&:hover{
+                        outline: none;
+                        border:none;
+                    }
+                }
+            }
+            &.userPhoto{
+                a{
+                    padding-top: 4px;
+                    padding-bottom: 4px;
+                    img{
+                        border-radius:50%;
+                        width:32px;
+                        height:32px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.wrapper{
+    //background-image:url('/assets/images/pexels-photo-261146.jpeg');
+    //background-attachment: fixed;
+    //background-size:100% 100%;
+    min-height:calc(100vh - 56px);
+    padding:30px 0;
+    position:relative;
+    img{
+        width:100%;
+        height:100%;
+        position: absolute;
+        top:0;
+        left:0;
+        &.blur{
+            filter:blur(4px);
+        }
+    }
+    .overlay{
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background-color:rgba(0,0,0,0.5);
+    }
+}
