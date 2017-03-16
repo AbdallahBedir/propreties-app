@@ -4,41 +4,6 @@ body{
     //background-color:#2f2e33;
     font-family: 'Nunito', sans-serif !important;
 }
-.loading-page{
-    position: fixed;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #333;
-    display: flex;
-    opacity: 0;
-    transition: opacity 8s ease-in-out;
-
-}
-/* .loading screen is visible when app is not bootstraped yet, .my-app is empty */
-my-app:empty + .loading {
-    opacity: 1;
-    z-index: 100;
-}
-.loader{
-  height: 100px;
-  width: 20%;
-  text-align: center;
-  padding: 1em;
-  margin: auto;
-  display: inline-block;
-  vertical-align: top;
-}
-
-/*
-  Set the color of the icon
-*/
-svg path,
-svg rect{
-  fill: $danger-color;
-}
 button{
     font-family: 'Nunito', sans-serif !important
 }
