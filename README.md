@@ -1,4 +1,27 @@
-# PropretiesApp
+# MEAN AUTHENTICATION APP [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://abdallahbedir.github.io/propreties-app/)
+> Properties App uses firebase as a backend
+
+[<img width="60" align="middle" src="https://www.ag-grid.com/images/angular2.png">](https://angular.io/)
+[<img width="60" align="middle" src="https://firebase.google.com/_static/images/firebase/touchicon-180.png">](https://firebase.google.com/)
+
+``` bash
+# Features used 
+
+angularRouting
+
+CanActivate,CanDeactivate
+
+angularmaterial
+
+angularfire2
+
+firebase
+
+resolver
+
+angular2 animation
+
+```
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.1.
 
